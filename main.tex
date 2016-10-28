@@ -1,62 +1,41 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage[autocite = superscript,style = nature]{biblatex}
-\addbibresource{Mendeley.bib}
-\usepackage[compatibility=false]{caption}
-\usepackage{subcaption}
-\usepackage[section]{placeins}
-\usepackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0pt}
-\setlist[enumerate]{noitemsep, topsep=0pt}
+\documentclass{compacttex}
 
-\renewcommand{\rmdefault}{ptm}
-\usepackage[compact]{titlesec}
-\titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[.\kern 1pc]
-\titlespacing*{\section}{0pt}{0pt}{0pt}
+% bibliography entries stored in external document
+\addbibresource{bibliography.bib}
 
-\usepackage{footmisc}
-
-\title{NSF GRFP Research Statement}
-\author{Matthew Moreno}
+\title{CompactLatex}
+\author{My Name}
 
 \begin{document}
 
-\begin{center}
-{
- \textbf{Promoting Irregular Refinement Potential in Evolving Artificial Neural Networks}
-}
-\end{center}
-\vspace{-2.2ex}
+\printtitle
 
-\input{tex/summary.tex}
+\section{Introduction}
+% note the use of autocite to add citations
+% this will make superscript citations, which take less space
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus ut risus id elementum. Nunc dui eros, tincidunt ac odio et, fermentum sollicitudin eros. Duis rutrum quis magna vitae tincidunt. Ut quis suscipit ante, in aliquet lorem. Ut et tortor enim. Vivamus eu libero luctus, suscipit metus nec, facilisis turpis.\autocite{2006RepresentationsAlgorithms} In dignissim lobortis elit id imperdiet. Curabitur euismod lorem nibh, quis semper velit tempor sed. Praesent porttitor, quam quis fringilla imperdiet, nisi sapien iaculis ante, sit amet luctus eros felis nec sem. Ut orci diam, semper in magna id, imperdiet tristique arcu. Vivamus lacinia tempor risus ut suscipit. Curabitur ultricies ullamcorper justo, id tristique diam pellentesque at.\autocite{Hu2010EvolvabilityBiology} Phasellus sit amet orci in diam sollicitudin egestas. Aliquam luctus, dui non aliquet commodo, quam arcu tempor leo, sed tempus magna nulla et erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla efficitur justo nisi, eu mattis enim porta ac.\autocite{Reisinger2007AcquiringRepresentations}
 
-\input{tex/background.tex}
+\section{Background}
+\lipsum[3-7]
 
-\input{tex/motivation.tex}
+\section{Research Plan}
+\lipsum[8-10]
 
-\input{tex/research_plan.tex}
+\section{Impact}
+\lipsum[11]
+\begin{itemize}
+  \item Lists are rendered compactly.
+  \item No wasted white space here!
+  \item I'll add a citation to this list.\autocite{Reisinger2007AcquiringRepresentations}
+\end{itemize}
+\lipsum[14]
 
-\input{tex/expected_results.tex}
-
-\input{tex/impact.tex}
-
-% \input{tex/intellectual_merit.tex}
-
-% \input{tex/broader_impact.tex}
-
-\input{tex/bibliography.tex}
-
-%\input{tex/appendix.tex}
-
-%\input{tex/motivation.tex}
-
-%\input{tex/background.tex}
-
-%\input{tex/topic.tex}
-
+% squeeze the reference line spacing, if you would like
+{\setstretch{1.0}
+\begin{footnotesize}
+\section{References}
+\newusedecl{printbib}{Reisinger2007AcquiringRepresentations}{2006RepresentationsAlgorithms}{Hu2010EvolvabilityBiology}
+\end{footnotesize}
+\par}
 
 \end{document}
