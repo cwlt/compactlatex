@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[autocite = superscript,style = nature]{biblatex}
+\addbibresource{Mendeley.bib}
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+\renewcommand{\rmdefault}{ptm}
+\usepackage[compact]{titlesec}
+\titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[.\kern 1pc]
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+\usepackage{footmisc}
+
+\title{NSF GRFP Research Statement}
+\author{Matthew Moreno}
+
+\begin{document}
+
+\begin{center}
+{
+ \textbf{Promoting Irregular Refinement Potential in Evolving Artificial Neural Networks}
+}
+\end{center}
+\vspace{-2.2ex}
+
+\input{tex/summary.tex}
+
+\input{tex/background.tex}
+
+\input{tex/motivation.tex}
+
+\input{tex/research_plan.tex}
+
+\input{tex/expected_results.tex}
+
+\input{tex/impact.tex}
+
+% \input{tex/intellectual_merit.tex}
+
+% \input{tex/broader_impact.tex}
+
+\input{tex/bibliography.tex}
+
+%\input{tex/appendix.tex}
+
+%\input{tex/motivation.tex}
+
+%\input{tex/background.tex}
+
+%\input{tex/topic.tex}
+
+
+\end{document}
